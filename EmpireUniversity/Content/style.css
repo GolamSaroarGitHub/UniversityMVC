@@ -1,0 +1,14 @@
+﻿.jumbotron {
+
+    background-image: url(uni.jpg);
+    background-repeat: no-repeat;
+   background-size: 100%;
+    opacity: 0.4;
+    color: #330000;
+}
+body {
+    background-color: lavender;
+}
+.jumoText {
+    color: red;
+}

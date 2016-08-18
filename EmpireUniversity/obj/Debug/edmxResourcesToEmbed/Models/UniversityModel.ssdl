@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpiresUniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseCode" Type="int" Nullable="false" />
+    <Property Name="CourseName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CourseCredit" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CourseDescription" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Semestar" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentCode" Type="int" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DesignationName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Semester">
+    <Key>
+      <PropertyRef Name="SemesterID" />
+    </Key>
+    <Property Name="SemesterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SemesterName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeacherName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TeacherAddress" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="TeacherEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TeacherPhoneNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreditTaken" Type="int" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EmpiresUniversityModelStoreContainer">
+    <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Designation" EntityType="Self.Designation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Semester" EntityType="Self.Semester" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

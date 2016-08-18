@@ -1,0 +1,66 @@
+﻿@model EmpireUniversity.Models.Teacher
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Teacher</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherPhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherPhoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditTaken)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditTaken)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TeacherID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

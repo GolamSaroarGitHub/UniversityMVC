@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmpiresUniversityModelStoreContainer" CdmEntityContainer="EmpiresUniversityEntities">
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="Semestar" ColumnName="Semestar" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="CourseCode" ColumnName="CourseCode" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseCredit" ColumnName="CourseCredit" />
+          <ScalarProperty Name="CourseDescription" ColumnName="CourseDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Designation">
+        <MappingFragment StoreEntitySet="Designation">
+          <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+          <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Semesters">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Semester">
+        <MappingFragment StoreEntitySet="Semester">
+          <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+          <ScalarProperty Name="SemesterName" ColumnName="SemesterName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="TeacherName" ColumnName="TeacherName" />
+          <ScalarProperty Name="TeacherAddress" ColumnName="TeacherAddress" />
+          <ScalarProperty Name="TeacherEmail" ColumnName="TeacherEmail" />
+          <ScalarProperty Name="TeacherPhoneNo" ColumnName="TeacherPhoneNo" />
+          <ScalarProperty Name="CreditTaken" ColumnName="CreditTaken" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

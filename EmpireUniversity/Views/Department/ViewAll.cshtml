@@ -1,0 +1,39 @@
+﻿@model System.Collections.Generic.IEnumerable<EmpireUniversity.Models.Department>
+@{
+    ViewBag.Title = "ViewAll";
+}
+
+<h2>ViewAll</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentName)
+            </td>
+           
+        </tr>
+        
+    }
+    <tr>
+        
+        <td>
+            @Html.ActionLink("Back To Home", "Index")
+        </td>
+    </tr>
+
+</table>
+
