@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.ComponentModel.DataAnnotations;
-
 namespace EmpireUniversity.Models
 {
     using System;
@@ -16,31 +14,13 @@ namespace EmpireUniversity.Models
     
     public partial class Teacher
     {
-
-    [Required]
         public int TeacherID { get; set; }
-
-    [Required]
         public string TeacherName { get; set; }
-
-    [Required]
         public string TeacherAddress { get; set; }
-
-    [Required]
-        [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string TeacherEmail { get; set; }
-
-    [Required]
-    [Range(11, 11)]
         public string TeacherPhoneNo { get; set; }
-
-    [Required]
         public int CreditTaken { get; set; }
-
-    [Required]
         public string Designation { get; set; }
-
-    [Required]
         public string Department { get; set; }
     }
 }

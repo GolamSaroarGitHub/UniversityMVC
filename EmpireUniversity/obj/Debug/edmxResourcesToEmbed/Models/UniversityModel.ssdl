@@ -1,16 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="EmpiresUniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Allocate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Course" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoomNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Day" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FromTime" Type="varchar" MaxLength="50" />
+    <Property Name="ToTime" Type="varchar" MaxLength="50" />
+    <Property Name="FromTimeHH" Type="varchar" MaxLength="50" />
+    <Property Name="FromTimeMM" Type="varchar" MaxLength="50" />
+    <Property Name="ToTimeHH" Type="varchar" MaxLength="50" />
+    <Property Name="ToTimeMM" Type="varchar" MaxLength="50" />
+    <Property Name="FromTimeAMPM" Type="varchar" MaxLength="50" />
+    <Property Name="ToTimeAMPM" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Course">
     <Key>
       <PropertyRef Name="CourseID" />
     </Key>
     <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CourseCode" Type="int" Nullable="false" />
+    <Property Name="CourseCode" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="CourseName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="CourseCredit" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="CourseDescription" Type="varchar" MaxLength="500" Nullable="false" />
     <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Semestar" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Day">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DayName" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Department">
     <Key>
@@ -27,12 +52,32 @@
     <Property Name="DesignationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DesignationName" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomNo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Semester">
     <Key>
       <PropertyRef Name="SemesterID" />
     </Key>
     <Property Name="SemesterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SemesterName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistrationNO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Teacher">
     <Key>
@@ -48,10 +93,14 @@
     <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityContainer Name="EmpiresUniversityModelStoreContainer">
+    <EntitySet Name="Allocate" EntityType="Self.Allocate" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Day" EntityType="Self.Day" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Designation" EntityType="Self.Designation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Semester" EntityType="Self.Semester" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

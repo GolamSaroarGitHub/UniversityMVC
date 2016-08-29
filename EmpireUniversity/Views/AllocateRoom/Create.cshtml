@@ -1,0 +1,135 @@
+﻿@model EmpireUniversity.Models.Allocate
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Allocate</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Department, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Department, (SelectList)ViewBag.Departments, "-- Select Departments --")
+                @Html.ValidationMessageFor(model => model.Department)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Course, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Course, (SelectList)ViewBag.Courses, "-- Select Course --")
+                @Html.ValidationMessageFor(model => model.Course)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RoomNo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.RoomNo, (SelectList)ViewBag.Rooms, "-- Select Rooms --")
+                @Html.ValidationMessageFor(model => model.RoomNo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Day, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Day, (SelectList)ViewBag.Days, "-- Select Days --")
+                @Html.ValidationMessageFor(model => model.Day)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FromTime, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.FromTime)*@
+                @Html.EditorFor(model => model.FromTimeHH):@Html.EditorFor(model => model.FromTimeMM)
+                
+                @Html.RadioButtonFor(model => model.FromTimeAMPM, "AM")AM
+                @Html.RadioButtonFor(model => model.FromTimeAMPM, "PM")PM
+                @Html.ValidationMessageFor(model => model.FromTime)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ToTime, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.ToTime)*@
+                @Html.EditorFor(model => model.ToTimeHH):
+                @Html.EditorFor(model => model.ToTimeMM)
+                
+                @Html.RadioButtonFor(model => model.ToTimeAMPM, "AM")AM
+                @Html.RadioButtonFor(model => model.ToTimeAMPM, "PM")PM
+
+
+                @Html.ValidationMessageFor(model => model.ToTime)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.FromTimeHH, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FromTimeHH)
+                @Html.ValidationMessageFor(model => model.FromTimeHH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FromTimeMM, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FromTimeMM)
+                @Html.ValidationMessageFor(model => model.FromTimeMM)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ToTimeHH, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ToTimeHH)
+                @Html.ValidationMessageFor(model => model.ToTimeHH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ToTimeMM, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ToTimeMM)
+                @Html.ValidationMessageFor(model => model.ToTimeMM)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FromTimeAMPM, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FromTimeAMPM)
+                @Html.ValidationMessageFor(model => model.FromTimeAMPM)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ToTimeAMPM, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ToTimeAMPM)
+                @Html.ValidationMessageFor(model => model.ToTimeAMPM)
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

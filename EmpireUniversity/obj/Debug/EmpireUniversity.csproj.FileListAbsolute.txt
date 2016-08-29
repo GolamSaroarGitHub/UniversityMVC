@@ -50,6 +50,6 @@ E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\bin\Microsoft.
 E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\bin\Microsoft.Owin.Security.Google.xml
 E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\bin\Microsoft.Owin.Security.Twitter.xml
 E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\obj\Debug\EmpireUniversity.csprojResolveAssemblyReference.cache
 E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\obj\Debug\EmpireUniversity.dll
 E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\obj\Debug\EmpireUniversity.pdb
+E:\VisualStudioProjects\ASP.NET\EmpireUniversity\EmpireUniversity\obj\Debug\EmpireUniversity.csprojResolveAssemblyReference.cache

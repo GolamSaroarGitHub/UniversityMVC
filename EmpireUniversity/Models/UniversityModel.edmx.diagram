@@ -5,11 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="34775f72d3314faa84d3c7f5ae312923" Name="Diagram1">
-        <EntityTypeShape EntityType="EmpiresUniversityModel.Course" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmpiresUniversityModel.Department" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmpiresUniversityModel.Designation" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmpiresUniversityModel.Semester" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmpiresUniversityModel.Teacher" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Department" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Designation" Width="1.5" PointX="0.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Semester" Width="1.5" PointX="2.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Teacher" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Student" Width="1.5" PointX="4.125" PointY="0.5" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Day" Width="1.5" PointX="0.5" PointY="5.625" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Room" Width="1.5" PointX="2.5" PointY="5.625" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Course" Width="1.5" PointX="6.125" PointY="3" />
+        <EntityTypeShape EntityType="EmpiresUniversityModel.Allocate" Width="1.5" PointX="4.625" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

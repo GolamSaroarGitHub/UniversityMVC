@@ -10,109 +10,123 @@ using EmpireUniversity.Models;
 
 namespace EmpireUniversity.Controllers
 {
-    public class CourseController : Controller
+    public class AllocateRoomController : Controller
     {
         private EmpiresUniversityEntities db = new EmpiresUniversityEntities();
 
-        // GET: /Course/
+        // GET: /AllocateRoom/
         public ActionResult Index()
         {
-            return View(db.Courses.ToList());
+            return View(db.Allocates.ToList());
         }
 
-        // GET: /Course/Details/5
+        // GET: /AllocateRoom/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = db.Courses.Find(id);
-            if (course == null)
+            Allocate allocate = db.Allocates.Find(id);
+            if (allocate == null)
             {
                 return HttpNotFound();
             }
-            return View(course);
+            return View(allocate);
         }
 
-        // GET: /Course/Create
+        // GET: /AllocateRoom/Create
         public ActionResult Create()
         {
+
+
             ViewBag.Departments = new SelectList(db.Departments, "DepartmentName", "DepartmentName");
-            ViewBag.Semestars = new SelectList(db.Semesters, "SemesterName", "SemesterName");
+            ViewBag.Courses = new SelectList(db.Courses, "CourseName", "CourseName");
+            ViewBag.Rooms = new SelectList(db.Rooms, "RoomNo", "RoomNo");
+            ViewBag.Days = new SelectList(db.Days, "DayName", "DayName");
+
+
             return View();
         }
 
-        // POST: /Course/Create
+        // POST: /AllocateRoom/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="CourseID,CourseCode,CourseName,CourseCredit,CourseDescription,Department,Semestar")] Course course)
+        public ActionResult Create([Bind(Include="Id,Department,Course,RoomNo,Day,FromTime,ToTime,FromTimeHH,FromTimeMM,ToTimeHH,ToTimeMM,FromTimeAMPM,ToTimeAMPM")] Allocate allocate)
         {
+            if (allocate.FromTimeAMPM == "PM")
+            {
+                
+
+            }
+
+
+
             if (ModelState.IsValid)
             {
-                db.Courses.Add(course);
+                db.Allocates.Add(allocate);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(course);
+            return View(allocate);
         }
 
-        // GET: /Course/Edit/5
+        // GET: /AllocateRoom/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = db.Courses.Find(id);
-            if (course == null)
+            Allocate allocate = db.Allocates.Find(id);
+            if (allocate == null)
             {
                 return HttpNotFound();
             }
-            return View(course);
+            return View(allocate);
         }
 
-        // POST: /Course/Edit/5
+        // POST: /AllocateRoom/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="CourseID,CourseCode,CourseName,CourseCredit,CourseDescription,Department,Semestar")] Course course)
+        public ActionResult Edit([Bind(Include="Id,Department,Course,RoomNo,Day,FromTime,ToTime,FromTimeHH,FromTimeMM,ToTimeHH,ToTimeMM,FromTimeAMPM,ToTimeAMPM")] Allocate allocate)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(course).State = EntityState.Modified;
+                db.Entry(allocate).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(course);
+            return View(allocate);
         }
 
-        // GET: /Course/Delete/5
+        // GET: /AllocateRoom/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = db.Courses.Find(id);
-            if (course == null)
+            Allocate allocate = db.Allocates.Find(id);
+            if (allocate == null)
             {
                 return HttpNotFound();
             }
-            return View(course);
+            return View(allocate);
         }
 
-        // POST: /Course/Delete/5
+        // POST: /AllocateRoom/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Course course = db.Courses.Find(id);
-            db.Courses.Remove(course);
+            Allocate allocate = db.Allocates.Find(id);
+            db.Allocates.Remove(allocate);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -124,6 +138,12 @@ namespace EmpireUniversity.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+        public ActionResult ShowAllocation()
+        {
+            return View();
         }
     }
 }

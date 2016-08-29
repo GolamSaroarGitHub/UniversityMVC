@@ -12,14 +12,15 @@ namespace EmpireUniversity.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Course
+    public partial class Student
     {
-        public int CourseID { get; set; }
-        public string CourseCode { get; set; }
-        public string CourseName { get; set; }
-        public decimal CourseCredit { get; set; }
-        public string CourseDescription { get; set; }
+        public int ID { get; set; }
+        public string RegistrationNO { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string ContactNo { get; set; }
+        public System.DateTime Date { get; set; }
+        public string Address { get; set; }
         public string Department { get; set; }
-        public string Semestar { get; set; }
     }
 }

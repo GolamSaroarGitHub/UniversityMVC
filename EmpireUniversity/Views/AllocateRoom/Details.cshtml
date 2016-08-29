@@ -1,0 +1,114 @@
+﻿@model EmpireUniversity.Models.Allocate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Allocate</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromTimeHH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromTimeHH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromTimeMM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromTimeMM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToTimeHH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToTimeHH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToTimeMM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToTimeMM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromTimeAMPM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromTimeAMPM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToTimeAMPM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToTimeAMPM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

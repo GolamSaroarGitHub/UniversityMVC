@@ -25,10 +25,14 @@ namespace EmpireUniversity.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Designation> Designations { get; set; }
         public virtual DbSet<Semester> Semesters { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Day> Days { get; set; }
+        public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Allocate> Allocates { get; set; }
     }
 }

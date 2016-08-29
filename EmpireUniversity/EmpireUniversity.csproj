@@ -161,15 +161,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AllocateRoomController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Allocate.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Course.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Day.cs">
       <DependentUpon>UniversityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Department.cs">
@@ -179,7 +187,13 @@
       <DependentUpon>UniversityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Room.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Semester.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Student.cs">
       <DependentUpon>UniversityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Teacher.cs">
@@ -273,17 +287,28 @@
     <Content Include="Views\Department\Details.cshtml" />
     <Content Include="Views\Department\Edit.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
-    <Content Include="Views\Course\Create.cshtml" />
-    <Content Include="Views\Course\Delete.cshtml" />
-    <Content Include="Views\Course\Details.cshtml" />
-    <Content Include="Views\Course\Edit.cshtml" />
-    <Content Include="Views\Course\Index.cshtml" />
     <Content Include="Views\Teacher\Create.cshtml" />
     <Content Include="Views\Teacher\Delete.cshtml" />
     <Content Include="Views\Teacher\Details.cshtml" />
     <Content Include="Views\Teacher\Edit.cshtml" />
     <Content Include="Views\Teacher\Index.cshtml" />
     <Content Include="Views\Department\ViewAll.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Course\Create.cshtml" />
+    <Content Include="Views\Course\Delete.cshtml" />
+    <Content Include="Views\Course\Details.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\AllocateRoom\Create.cshtml" />
+    <Content Include="Views\AllocateRoom\Delete.cshtml" />
+    <Content Include="Views\AllocateRoom\Details.cshtml" />
+    <Content Include="Views\AllocateRoom\Edit.cshtml" />
+    <Content Include="Views\AllocateRoom\Index.cshtml" />
+    <Content Include="Views\AllocateRoom\ShowAllocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

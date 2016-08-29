@@ -1,19 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EmpiresUniversityModelStoreContainer" CdmEntityContainer="EmpiresUniversityEntities">
-    <EntitySetMapping Name="Courses">
-      <EntityTypeMapping TypeName="EmpiresUniversityModel.Course">
-        <MappingFragment StoreEntitySet="Course">
-          <ScalarProperty Name="Semestar" ColumnName="Semestar" />
-          <ScalarProperty Name="Department" ColumnName="Department" />
-          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
-          <ScalarProperty Name="CourseCode" ColumnName="CourseCode" />
-          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
-          <ScalarProperty Name="CourseCredit" ColumnName="CourseCredit" />
-          <ScalarProperty Name="CourseDescription" ColumnName="CourseDescription" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Departments">
       <EntityTypeMapping TypeName="EmpiresUniversityModel.Department">
         <MappingFragment StoreEntitySet="Department">
@@ -50,6 +37,68 @@
           <ScalarProperty Name="TeacherPhoneNo" ColumnName="TeacherPhoneNo" />
           <ScalarProperty Name="CreditTaken" ColumnName="CreditTaken" />
           <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RegistrationNO" ColumnName="RegistrationNO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Days">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Day">
+        <MappingFragment StoreEntitySet="Day">
+          <ScalarProperty Name="DayName" ColumnName="DayName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="Semestar" ColumnName="Semestar" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="CourseDescription" ColumnName="CourseDescription" />
+          <ScalarProperty Name="CourseCredit" ColumnName="CourseCredit" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseCode" ColumnName="CourseCode" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Allocates">
+      <EntityTypeMapping TypeName="EmpiresUniversityModel.Allocate">
+        <MappingFragment StoreEntitySet="Allocate">
+          <ScalarProperty Name="ToTimeAMPM" ColumnName="ToTimeAMPM" />
+          <ScalarProperty Name="FromTimeAMPM" ColumnName="FromTimeAMPM" />
+          <ScalarProperty Name="ToTimeMM" ColumnName="ToTimeMM" />
+          <ScalarProperty Name="ToTimeHH" ColumnName="ToTimeHH" />
+          <ScalarProperty Name="FromTimeMM" ColumnName="FromTimeMM" />
+          <ScalarProperty Name="FromTimeHH" ColumnName="FromTimeHH" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -7,9 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
-
 namespace EmpireUniversity.Models
 {
     using System;
@@ -18,9 +15,6 @@ namespace EmpireUniversity.Models
     public partial class Department
     {
         public int DepartmentID { get; set; }
-       [Required]
-
-       //[Index("DepartmentCode", 1, IsUnique = true)]
         public int DepartmentCode { get; set; }
         public string DepartmentName { get; set; }
     }
